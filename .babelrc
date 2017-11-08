@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "airbnb",
+      {
+        "modules": false
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": ["airbnb"]
+    },
+    "commonjs": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    },
+    "es": {}
+  }
+}

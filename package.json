@@ -1,0 +1,46 @@
+{
+  "name": "number",
+  "version": "0.1.0",
+  "description": "Dealing with JavaScript's numerical problems",
+  "main": "lib/index.js",
+  "module":"es/index.js",
+  "scripts": {
+    "watch": "rollup --watch -c",
+    "lint": "eslint --fix src test build",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:umd": "cross-env NODE_ENV=development rollup -c",
+    "build:umd:min": "cross-env NODE_ENV=production rollup -c",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunOpar/round-js.git"
+  },
+  "keywords": ["JavaScript", "number", "round"],
+  "author": "sunOpar  <xygjsj@139.com> (https://github.com/sunopar)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunOpar/round-js/issues"
+  },
+  "files": ["build", "lib", "es", "src", "index.d.ts"],
+  "homepage": "https://github.com/sunOpar/round-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-airbnb": "^2.4.0",
+    "cross-env": "^5.1.1",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^21.2.1",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1"
+  },
+  "dependencies": {}
+}
