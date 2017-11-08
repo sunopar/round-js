@@ -1,5 +1,5 @@
 {
-  "name": "number",
+  "name": "so-round",
   "version": "0.1.0",
   "description": "Dealing with JavaScript's numerical problems",
   "main": "lib/index.js",
